@@ -1,0 +1,713 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*css reset語法*/
+
+/*wrap*/
+.wrap{
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+/*---------------佈局 layout(共同內容)---------------*/
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(60, 60, 60, 0.4);/*淡化背景顏色*/
+    width: 1024px;
+}
+.hexschool{
+    background-image: url(img/hexschool.png);
+    width: 182px;
+    height: 36px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.hexschool a{
+    display: block;/*區塊元素*/
+    text-indent: 100%;/*使文字縮進100%*/
+    overflow: hidden;/*隱藏溢出文字*/
+    white-space: nowrap;/*隱藏下行溢出文字*/
+    font-size: 50px;
+}
+.header ul{
+    float: right;
+    margin-right: 30px;
+}
+.header li{
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.header li a{
+    padding: 0 15px;
+    color: white;
+    text-decoration: none;/*消除底線*/
+    font-size: 14px;
+}
+.header li a:hover{
+    padding-bottom: 20px;
+    color: #42d3a9;
+    box-shadow: inset 0 -5px #42d3a9;
+}
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #323228;
+    /*margin-top: 20px;*/
+}
+.footer-logo{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.footer-logo span{
+    margin-left: 63px;
+}
+.footer ul{
+    float: right;
+    margin-right: 30px;
+}
+.footer li{
+    float: left;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.footer li img{
+    padding: 0 10px;
+}
+.footer li img:hover{
+    width: 40px;
+    height: 40px;
+}
+
+/*---------------首頁(home.html)---------------*/
+/*banner*/
+.home-banner{
+    background-image: url(img/bg_home.png);
+    background-size: cover;
+    width: 1024px;
+    height: 560px;
+    position: relative;
+    z-index: 10;
+}
+.home-header{
+    position: absolute;
+    z-index: 20;/*將header放在圖片上層*/
+}
+.home-h1{
+    position: absolute;
+    padding-top: 175px;
+    padding-left: 20px;
+    line-height: 70px;/*行字間格距離*/
+    color: #00cc99;
+    font-size: 50px;
+}
+.home-h1 span{
+    color: white;
+}
+.home-banner .box{
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 30px;
+    padding: 15px 35px;
+    width: 150px;
+    height: 20px;
+    background: #00cc99;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+}
+.home-banner .box:hover{
+    padding: 18px 38px;
+}
+.home-banner .box a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*精選課程*/
+.featured{
+    padding-top: 60px;
+}
+.featured .titler{
+    display: flex;
+    justify-content: space-between;
+}
+.featured .titler h2{
+    font-size: 35px;
+    color: #00cc99;
+    font-weight: 800;
+}
+.featured .titler span{
+    font-size: 20px;
+    color: #b6b6b6;
+    font-weight: 700;
+}
+.featured .titler p a{
+    font-size: 15px;
+    color: #00cc99;
+    font-weight: 700;
+    text-decoration: none;/*消除底線*/
+    border: 2px solid #00cc99;
+    padding: 10px;
+    border-radius: 5px;
+}
+.featured .titler p a:hover{
+    font-size: 17px;
+    padding: 13px;
+}
+.featured .bodyer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+.featured .bodyer li{
+    padding: 10px;
+    width: 305px;
+    border-radius: 3px;/*圓弧*/
+    border: 1px solid #d9d9d9;
+    border-top: 0.1px solid whitesmoke;
+}
+.bodyer li:hover{
+    box-shadow: 0 5px 10px -5px gray;/*x軸 y軸 擴散效果 顏色*/
+}
+.bodyer li img{
+    margin: auto;
+    display: block;/*將圖片設定調為區塊元素*/
+}
+.bodyer li h3{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px;
+}
+.bodyer li p{
+    line-height: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #afafaf;
+}
+
+/*課程比較*/
+.compare{
+    padding-top: 54px;
+}
+.compare h2{
+    font-size: 35px;
+    color: #00cc99;
+    font-weight: 800;
+}
+.compare span{
+    font-size: 20px;
+    color: #b6b6b6;
+    font-weight: 700;
+}
+.compare table{
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.compare th,.compare td{
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    text-align: center;
+    padding: 8px 55px;/*上下 左右*/
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.compare th{
+    background: #f6f6f7;
+}
+.emphasis{
+    color: #77e4c9;
+}
+
+/*個人資料*/
+.material{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ebebeb;
+    margin-top: 60px;
+}
+.material .meet{
+    width: 800px;
+    text-align: center;
+    font-size: 28px;
+    font-family: sans-serif;
+    line-height: 55px;/*行字間格距離*/
+    font-weight: 600;
+    padding: 110px 70px;
+    /*border: 1px solid black;*/
+}
+.material .inputdata{
+    padding: 100px 0 30px 20px;/*上 右 下 左*/
+    /*border: 1px solid black;*/
+}
+.material .inputdata input{
+    display: block;
+    height: 40px;
+    float: left;
+    margin: 10px 0;
+    border: 0;
+    border-radius: 5px;
+}
+.material .inputdata input::-webkit-input-placeholder{/*調整input預設文字*/
+    font-size: 20px;
+}
+.material .inputdata input:hover{
+    background-color: aquamarine;
+}
+.material .inputdata #submit{
+    float: right;
+    margin-right: 45px;
+    width: 140px;
+    height: 50px;
+    background: #00cc99;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+.material .inputdata #submit:hover{
+    background: white;
+    color: #00cc99;
+}
+
+/*---------------課程(course.html)---------------*/
+/*course-banner*/
+.course-banner{
+    background-image: url(img/bg_course.png);
+    background-size: cover;
+    width: 1025px;
+    height: 560px;
+    position: relative;
+    z-index: 10;
+}
+.course-header{
+    position: absolute;
+    z-index: 20;/*將header放在圖片上層*/
+}
+.course-banner .titler{
+    display: flex;
+    justify-content: space-between;
+}
+.course-h1 h1{
+    position: absolute;
+    padding-top: 190px;
+    padding-left: 20px;
+    line-height: 40px;/*行字間格距離*/
+    color: #00cc99;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.course-h1 h1 span{
+    font-size: 25px;
+    color: white;
+}
+.course-banner .titler .pic{
+    display: flex;
+    padding-top: 112px;
+    padding-right: 30px;
+}
+.course-banner .titler .pic img{
+    padding-right: 10px;
+}
+.course-banner .box{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 30px;
+    padding: 20px 35px 10px 35px;
+    width: 150px;
+    height: 20px;
+    background: #00cc99;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+}
+.course-banner .box:hover{
+    padding: 18px 38px;
+}
+.course-banner .box a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*teacher*/
+.teacher{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 621px;
+}
+.teacher .people{
+    display: flex;
+}
+.teacher .people img{
+    margin-top: 60px;
+}
+.teacher .people h1{
+    margin-top: 105px;
+    margin-left: 38px;
+    line-height: 70px;/*行字間格距離*/
+    color: #00cc99;
+    font-size: 50px;
+    font-weight: 800;
+}
+.teacher .people span{
+    color: black;
+}
+.teacher ul{
+    list-style-type: disc;/*恢復ul編號*/
+    list-style-position: inside;/*項目符號將位於清單項目內*/
+    padding-top: 115px;
+    font-family: Microsoft JhengHei;
+    color: #9b9b9b;
+    line-height:25px;
+    font-weight: 700;
+}
+.teacher ul li:hover{
+    font-size: 20px;
+}
+
+/*special*/
+.special{
+    padding-top: 55px;
+    margin: 0 auto;
+    width: 621px;
+}
+.special h2{
+    font-size: 35px;
+    color: #00cc99;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.special span{
+    font-size: 20px;
+    color: #b6b6b6;
+    font-weight: 600;
+}
+.special ol{
+    list-style-type: decimal;/*恢復ol編號*/
+    list-style-position: outside;/*項目符號不包含清單項目內*/
+    font-family: Microsoft JhengHei;
+    line-height:25px;
+    font-weight: 700;
+    padding-left: 23px;
+}
+
+/*課程大綱*/
+.outline{
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 621px;
+}
+.outline h2{
+    font-size: 35px;
+    color: #00cc99;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.outline span{
+    font-size: 20px;
+    color: #b6b6b6;
+    font-weight: 600;
+}
+.outline table{
+    width: 621px;
+    font-size: 17px;
+}
+.outline tr td{
+    padding: 18px 0 14px 36px;
+    font-weight: 700;
+    color: #9b9b9b;
+    font-family: sans-serif;
+}
+.outline tr .bg{
+    background-color: #ebebeb;
+    font-family: sans-serif;
+    color: black;
+}
+
+/*馬上行動*/
+.action{
+    display: flex;
+    justify-content: center;
+    background-color: #ebebeb;
+    margin-top: 63px;
+}
+.action h2{
+    width: 400px;
+    text-align: left;
+    font-size: 28px;
+    line-height: 55px;/*行字間格距離*/
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 110px 10px;
+    /*border: 1px solid black;*/
+}
+.action .box{
+    padding-top: 160px;
+    margin-left: 1px;
+    /*border: 1px solid black;*/
+}
+.action p{
+    padding: 15px 35px;
+    width:  130px;
+    height: 20px;
+    background: #00cc99;
+    border-radius: 5px;
+    text-align: center;
+}
+.action p:hover{
+    padding: 18px 38px;
+}
+.action p a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*---------------問答(QA.html)---------------*/
+/*QA-banner*/
+.QA-banner{/*背景圖*/
+    background-image: url(img/bg_QA.png);
+    background-size: cover;
+    width: 1024px;
+    height: 560px;
+    position: relative;
+    z-index: 10;
+}
+.QA-header{
+    position: absolute;
+    z-index: 20;/*將header放在圖片上層*/
+}
+.QA-banner h1,.QA-banner p{/*文字放絕對位置*/
+    position: absolute;
+    font-family: sans-serif;
+}
+.QA-banner h1{
+    line-height: 40px;/*行字間格距離*/
+    top: 182px;
+    left: 340px;
+    color: white;
+    font-size: 50px;
+}
+.QA-banner p{
+    top: 235px;
+    left: 325px;
+    color: #00cc99;
+    font-size: 25px;
+}
+.QA-banner form{
+    position: relative;
+    padding-top: 310px;
+    padding-left: 190px;
+}
+.QA-banner form input{/*輸入欄*/
+    width: 622px;
+    height: 44px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.QA-banner button{
+    position: absolute;
+    border: none;
+    top: 313px;
+    right: 208px;
+    background-color: white;
+    cursor: pointer;/*游標屬性*/
+}
+.QA-banner img{/*圖片大小*/
+    width: 38px;
+    height: 38px;
+}
+
+/*問題解答*/
+.answer{
+    width: 784px;
+    margin: 0 auto;
+}
+/*question*/
+.question{
+    margin-top: 61px;
+/*title*/
+}
+.question h2{
+    font-size: 35px;
+    color: #00cc99;
+    font-weight: 600;
+}
+.question span{
+    font-size: 18px;
+    color: #b6b6b6;
+}
+.question p{
+    margin-top: 28px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.question .ans{
+    color: #b6b6b6;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 550;
+    margin-top: 5px;
+    line-height: 20px;/*行字間格距離*/
+}
+.question .ans a{
+    color: #00cc99;
+    text-decoration: none;
+}
+.question .ans a:hover{
+    font-size: 18px;
+}
+.question ol li{
+    color: #b6b6b6;
+    font-size: 16px;
+    font-family: sans-serif;
+    list-style-type: decimal;/*恢復ol編號*/
+    list-style-position: inside;/*項目符號將位於清單項目內*/
+    line-height: 25px;/*行字間格距離*/
+    font-weight: 550;
+}
+.question ul li{
+    color: #b6b6b6;
+    font-size: 16px;
+    font-family: sans-serif;
+    list-style-type: disc;/*恢復ul編號*/
+    list-style-position: inside;/*項目符號將位於清單項目內*/
+    line-height: 25px;/*行字間格距離*/
+    font-weight: 550;
+}
+.question .refund{
+    color: black;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+/*問題回報*/
+.return{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ebebeb;
+    margin-top: 50px;
+}
+.return .send{
+    width: 1000px;
+    font-size: 28px;
+    font-family: sans-serif;
+    line-height: 55px;/*行字間格距離*/
+    font-weight: 600;
+    padding: 110px 70px;
+    /*border: 1px solid black;*/
+}
+.return .inputdata{
+    padding: 100px 0 30px 20px;/*上 右 下 左*/
+    /*border: 1px solid black;*/
+}
+.return .inputdata input{
+    display: block;
+    height: 40px;
+    float: left;
+    margin: 10px 0;
+    border: 0;
+    border-radius: 5px;
+}
+.return .inputdata textarea{
+    display: block;
+    float: left;
+    margin: 10px 0;
+    border: 0;
+    border-radius: 5px;
+}
+.return .inputdata input::-webkit-input-placeholder{/*調整input預設文字*/
+    font-size: 20px;
+}
+.return .inputdata textarea::-webkit-input-placeholder{
+    font-size: 20px;
+}
+.return .inputdata input:hover{
+    background-color: aquamarine;
+}
+.return .inputdata textarea:hover{
+    background-color: aquamarine;
+}
+.return .inputdata #submit{
+    float: right;
+    margin-right: 55px;
+    width: 140px;
+    height: 50px;
+    background: #00cc99;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+.return .inputdata #submit:hover{
+    background: white;
+    color: #00cc99;
+}
+
+
+
+
